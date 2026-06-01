@@ -57,4 +57,74 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
   </circuit>
+  <circuit name="CU">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="CU"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(170,150)" name="Clock">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(170,90)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="RstClk"/>
+    </comp>
+    <comp lib="0" loc="(220,100)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(220,120)" name="Constant"/>
+    <comp lib="0" loc="(220,140)" name="Constant"/>
+    <comp lib="0" loc="(220,180)" name="Constant">
+      <a name="value" val="0x0"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(470,120)" name="NoConnect"/>
+    <comp lib="0" loc="(480,320)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="ClkOvr"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(580,250)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="T"/>
+      <a name="type" val="output"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(580,250)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit0" val="2"/>
+      <a name="bit2" val="0"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="2" loc="(450,180)" name="Decoder">
+      <a name="enable" val="false"/>
+      <a name="facing" val="south"/>
+      <a name="select" val="2"/>
+    </comp>
+    <comp lib="4" loc="(250,70)" name="Counter">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="State"/>
+      <a name="max" val="0x2"/>
+      <a name="width" val="2"/>
+    </comp>
+    <wire from="(170,150)" to="(250,150)"/>
+    <wire from="(170,90)" to="(250,90)"/>
+    <wire from="(220,100)" to="(250,100)"/>
+    <wire from="(220,120)" to="(250,120)"/>
+    <wire from="(220,140)" to="(250,140)"/>
+    <wire from="(220,180)" to="(250,180)"/>
+    <wire from="(430,120)" to="(470,120)"/>
+    <wire from="(430,180)" to="(450,180)"/>
+    <wire from="(450,200)" to="(450,240)"/>
+    <wire from="(450,240)" to="(560,240)"/>
+    <wire from="(460,200)" to="(460,230)"/>
+    <wire from="(460,230)" to="(560,230)"/>
+    <wire from="(470,200)" to="(470,220)"/>
+    <wire from="(470,220)" to="(560,220)"/>
+    <wire from="(480,200)" to="(480,320)"/>
+  </circuit>
 </project>
